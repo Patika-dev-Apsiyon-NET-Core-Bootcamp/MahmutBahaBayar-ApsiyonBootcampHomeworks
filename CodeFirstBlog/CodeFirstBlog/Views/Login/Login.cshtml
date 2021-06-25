@@ -1,0 +1,14 @@
+﻿@model User
+@{ ViewData["Title"] = "Login"; }
+
+<h1>SignUp</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.Label("Username");
+    @Html.TextBoxFor(x => x.UserName);
+    @Html.Label("Password");
+    @Html.TextBoxFor(x => x.Password);
+
+    <input type="submit" value="Login" />
+}

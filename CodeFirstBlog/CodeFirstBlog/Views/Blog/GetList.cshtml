@@ -1,0 +1,41 @@
+﻿@model List<BlogPost>
+@{
+
+    ViewBag.Title = "GetList";
+}
+<h2>Blog Posts</h2>
+
+<a href="/Blog/Add" class="btn btn-info">Add Blog Post</a>
+<br />
+<br />
+<table class="table">
+    <tr>
+        <td><b>Id</b></td>
+        <td><b>Blog Title</b></td>
+       
+    </tr>
+    @foreach (var blogPost in Model)
+    {
+        <tr>
+            <td>@blogPost.Id</td>
+            <td>@blogPost.BlogTitle</td>
+           
+
+
+            <td>
+                <a href="/Blog/Detail/@blogPost.Id" class="btn btn-success">Blog Details</a>
+
+
+
+
+            </td>
+
+            
+
+
+
+        </tr>
+    }
+</table>
+
+

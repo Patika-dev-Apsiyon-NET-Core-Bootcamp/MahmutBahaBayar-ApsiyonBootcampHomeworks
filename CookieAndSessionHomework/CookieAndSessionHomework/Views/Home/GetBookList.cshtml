@@ -1,0 +1,35 @@
+﻿@model List<BookModel>
+
+@{
+    ViewBag.Title = "GetBookList";
+}
+
+<h2>Books</h2>
+
+<table class="table">
+    <tr>
+
+        <td>Kitap Adı</td>
+        <td>Kitap Yazarı Adı</td>
+        <td>Kitap Yılı</td>
+
+
+
+
+
+
+    </tr>
+
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.BookName</td>
+            <td>@book.Author</td>
+            <td>@book.PublishYear</td>
+
+
+
+        </tr>
+
+    }
+</table>

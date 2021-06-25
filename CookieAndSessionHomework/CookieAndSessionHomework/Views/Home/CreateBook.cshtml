@@ -1,0 +1,26 @@
+﻿@model BookModel
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<form method="post">
+
+    <h2>Create</h2>
+    <div>
+        <label>Kitap Adı</label>
+        @Html.TextBoxFor(x => x.BookName)
+
+        <br /> <br />
+
+        <label>Kitabın Yazarı</label>
+        @Html.TextBoxFor(x => x.Author)
+        <br /> <br />
+        <label>Kitabın Yılı</label>
+        @Html.TextBoxFor(x => x.PublishYear)
+
+        <button type="submit">Kaydet</button>
+
+
+    </div>
+</form>

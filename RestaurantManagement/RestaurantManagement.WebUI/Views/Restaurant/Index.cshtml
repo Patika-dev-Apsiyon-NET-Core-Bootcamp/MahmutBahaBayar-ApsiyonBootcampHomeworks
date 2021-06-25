@@ -1,0 +1,28 @@
+﻿@model List<RestaurantManagement.WebUI.DTOs.RestaurantDto>
+
+<table class="table table-hover table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var menu in Model)
+        {
+<tr>
+    <td>@menu.Id</td>
+    <td>@menu.Name</td>
+    <td>@menu.Description</td>
+    <td>
+        <a href="/menu/index?restaurantId=@menu.Id" class="btn btn-success btn-xs">
+            Menuler
+        </a>
+    </td>
+</tr>}
+    </tbody>
+</table>

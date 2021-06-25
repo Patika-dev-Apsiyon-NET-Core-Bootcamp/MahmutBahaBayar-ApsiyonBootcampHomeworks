@@ -1,0 +1,24 @@
+﻿@model CodeFirstBlog.DTOs.DetailBlogWithComments
+
+
+
+<label>@Model.blogPost.BlogDescription</label>
+<p>@Model.blogPost.BlogDescription</p>
+
+<table>
+    <tr>
+        <th>UserId</th>
+        <th>Comment</th>
+
+    </tr>
+    @foreach (Comment comment in Model.Comments)
+    {
+        <tr>
+            <td>@comment.Description</td>
+
+        </tr>
+
+    }
+</table>
+
+<a href="/Comment/Add/@Model.blogPost.Id" class="btn btn-success">Add Comment</a>
